@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .container a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container a:hover {
+            text-decoration: underline;
+        }
+        .cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+    </style>
+    
+<header>
+
+  
+<div class="container">
+  
+        <a href="index.html" class="left"><u>Home</u></a>
+        <a href="about.html" class="center"><u>About</u></a>
+        <a href="contact.html" class="right"><u>Contact</u></a>
+</div>
+
+<h1 style="text-align:left;">Contact</h1>
+
+</header>
+
+</head>
+
+<body>
+  <h1>Form</h1>
+
+
+  <label for="fname">Nama : </label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Url : </label>
+  <input type="text" id="lname" name="lname"><br><br>
+
+<h1>Hobby</h1>
+
+<input type="checkbox" id="" name="" value="">
+  <label for=""> Mancing</label><br>
+  <input type="checkbox" id="" name="" value="">
+  <label for=""> Main game</label><br>
+  <input type="checkbox" id="" name="" value="">
+  <label for=""> Belajar</label><br><br>
+  
+  
+<h1>Jenis Kelamin</h1>
+
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">Lakik</label><br>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">Perempuan</label><br>
+  <input type="submit" value="Submit">
+  <button onclick="document.getElementById('id01').style.display='block'">Hapus</button>
+  
+  
+  <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Hapus Form ? </h1>
+      <p>Yakin ? </p>
+    
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
+
+
